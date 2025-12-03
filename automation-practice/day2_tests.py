@@ -10,7 +10,8 @@ fruits.remove("Banane")    # entfernen
 
 print(fruits)              # ['Apfel', 'Kiwi', 'Orange']
 
-len(fruits)                # FIXME Anzahl Elemente - funktioniert nicht, keine Ausgabe
+print(len(fruits))         # Anzahl Elemente
+
 
 
 # dictionary: speichert Daten in Schlüssel–Wert-Paaren
@@ -116,23 +117,44 @@ else:
 print('   Programmende Altersgruppen')
 
 
-# Passwortstärke
+# Passwortstärke erste Version
 
 print('   Programmanfang Passwortstärke')
 
 password = input("Gib dein Passwort ein: ")
-valuepw = len(password)
-print("Passwortlänge ist: ")
-print(valuepw)
 
-if valuepw < 4: 
+print(f"Die Passwortlänge ist: {len(password)}")
+
+if len(password) < 4: 
     print("Sehr schwach")
-elif 4 <= valuepw <= 7: 
+elif 4 <= len(password) <= 7: 
     print("Schwach")
-elif 8 <= valuepw <= 11: 
+elif 8 <= len(password) <= 11: 
     print("Gut")
 else:
     print("Stark")    
 
+print('   Programmende Passwortstärke')
+
+
+
+# Passwortstärke neue Version
+
+print('   Programmanfang Passwortstärke')
+
+password = input("Gib dein Passwort ein: ")
+
+pw_len = len(password)
+
+print(f"Die Passwortlänge ist: {pw_len}")
+
+if pw_len < 4: 
+    print("Sehr schwach")
+elif 4 <= pw_len <= 7: 
+    print("Schwach")
+elif 8 <= pw_len <= 11: 
+    print("Gut")
+else:
+    print("Stark")    
 
 print('   Programmende Passwortstärke')
