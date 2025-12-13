@@ -12,7 +12,11 @@ print("Aktualisierte Einkaufsliste: ", shopping)
 
 art_remove = input("Welchen Artikel möchtest du entfernen? ")
 
-shopping.remove (art_remove)
+if art_remove in shopping:
+    shopping.remove (art_remove)
+    print(f"Der Artikel '{art_remove}' wurde entfernt.")
+else:
+    print("Der Artikel steht nicht auf der Einkaufsliste.")
 
 print("Aktualisierte Einkaufsliste: ", shopping)
 
@@ -49,8 +53,8 @@ elif 50 <= einkaufswert < 100:
 else:
     rabatt_prozent = 0
 
-print("Dein Rabatt beträgt: ", rabatt_prozent, "%")
+print(f"Dein Rabatt beträgt: {rabatt_prozent} %")
 
 neuer_preis = einkaufswert - (einkaufswert * rabatt_prozent / 100)
 
-print("Dein neuer Preis nach Abzug des Rabatts ist: ", neuer_preis)
+print(f"Dein neuer Preis nach Abzug des Rabatts ist: {neuer_preis} €")
